@@ -170,3 +170,98 @@
 - setMonth()	设置 Date 对象中月份 (0 ~ 11)。
 - setSeconds()	设置 Date 对象中的秒钟 (0 ~ 59)。
 - setTime()	方法以毫秒设置 Date 对象。
+
+##### 4. RegExp [&](https://www.w3cschool.cn/zhengzebiaodashi/regexp-tutorial.html)
+> 描述了一种字符串匹配的模式（pattern），可以用来检查一个串是否含有某种子串、将匹配的子串替换或者从某个串中取出符合某个条件的子串
+
+###### 基础语法
+- 组成部分：1、斜杆  2、模式  3、标志
+    ```
+    var expression = / pattern / flags
+    ```
+- 创建方式
+    - 字面量表达
+    - 构造函数初始化
+    ```
+    new RegExp("表达式", "标志")
+    ```
+
+- 标志
+    - g：表示在全局范围内匹配，不在发现第一个匹配符后就停止
+    - i：表示不区分大小写
+    - m：表示多行范围内匹配，达到文末会继续查找下一行
+
+###### 实例属性
+- gloal：是否设置了g标志
+- ignoreCase：是否设置了i标志
+- multiline：是否设置了m标志
+- source：返回表达式的字符串
+- lastIndex：返回开始搜索下一个匹配字符位置
+ 
+###### 实例方法
+- exec()：返回包含第一个匹配项信息的数组
+- test()：测试是否存在匹配信息，存在返回true
+
+
+##### 5. Function 略
+
+##### 6. 基本包装类型
+> ECMAScript提供了3个特殊的引用类型:Boolean、Number、String
+
+> 基本包装类型与引用类型的主要区别是对象的生命周期。使用new操作符创建的引用类型的实例，在执行流离开当前作用域之前都一直保存。而自动创建的基本包装类型的对象则只存在于一行代码。
+
+> 只有对象才有属性和方法，为了方便操作基本数据类型，JavaScript 还提供了三个特殊的引用类型。如s1为字符串，当调用 s1.substring(5) 的时候，会先把 s1 包装成 String类型的临时对象，再调用 substring()方法，最后销毁临时对象。
+
+- Number
+    - toFixed
+    - toExponential 指数表示法
+    - toPrecision
+
+- String
+    - 字符方法
+        - charAt(arg)：返回对应索引位置字符
+        - charCodeAt(arg)：区别是返回字符编码
+    
+    - 字符串方法
+        - concat(arg)：字符串拼接，但是用 + 的情况居多
+        - slice(arg1, arg2)：返回子串
+        - substr(arg1, arg2)：返回子串，arg2表示返回个数
+        - substring(arg1, arg2)：返回子串，负值会被转为0
+
+    - 字符串位置方法
+        - indexOf(arg)：返回匹配的索引
+        - lastIndexOf(arg)：返回匹配的索引，尾部向前搜索
+        
+    - 字符串去空格
+        - trim()
+        
+    - 字符串大小写转换
+        - toLowerCase()
+        - toUpperCase()
+    
+    - 字符串模式匹配方法
+        - match(arg)
+        - search(arg)
+        - replace(arg1, arg2)
+        - split(arg)
+
+##### 7. 单体内置对象
+- Global
+    - encodeURI()、decodeURI()：不对本身就属于URI的符号进行编码解码
+    - encodeURIComponent()、decodeURIComponent()
+    - eval()
+
+    `还有很多其他的`
+    
+- Math
+    - 可能用到的常量
+        - Math.PI
+    - 四舍五入的方法
+        - Math.ceil()：向上舍入
+        - Math.floor()：向下舍入
+        - Math.round()：标准舍入
+    - 随机数（介于0~1，不包括0/1）
+        - Math.random()
+    - 其他方法
+    
+        
